@@ -1,0 +1,119 @@
+{\rtf1\ansi\ansicpg1250\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww30040\viewh16160\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 # Nem az adat volt rossz. A kontextus volt rossz.\
+### Amit a saj\'e1t l\'e1that\'f3s\'e1gi rendszer\'fcnk fejleszt\'e9se k\'f6zben tanultunk\
+\
+Egy audit lehet technikailag t\'f6k\'e9letes, \'e9s m\'e9gis feleslegesen m\'e9r valamit.\
+Ezt nem elm\'e9let mondja: a saj\'e1t rendszer\'fcnk tesztfuttat\'e1saib\'f3l der\'fclt ki.\
+\
+Ahogy egyre t\'f6bb, egym\'e1st\'f3l nagyon elt\'e9r\uc0\u337  \'fczleti profil\'fa v\'e1llalkoz\'e1s adatait\
+futtattuk \'e1t a L\'e1that\'f3s\'e1gi Jelent\'e9sen, ugyanaz az anom\'e1lia ism\'e9tl\uc0\u337 d\'f6tt. A\
+rendszer minden alkalommal lefutott. Az adatok be\'e9rkeztek, a m\'e9r\'e9s\
+megt\'f6rt\'e9nt, a riport elk\'e9sz\'fclt. Pap\'edron minden z\'f6ld volt.\
+\
+Amikor viszont emberk\'e9nt is \'e1tn\'e9zt\'fck ezeket a riportokat, felt\uc0\u369 nt valami:\
+\
+**nem az volt a k\'e9rd\'e9s, hogy a rendszer j\'f3l m\'e9r-e. Az volt a k\'e9rd\'e9s, hogy\
+j\'f3 dolgot m\'e9r-e.**\
+\
+## A sablon m\uc0\u369 k\'f6d\'f6tt. A kontextus nem.\
+\
+A L\'e1that\'f3s\'e1gi Jelent\'e9s eredeti logik\'e1ja els\uc0\u337 sorban helyi, \'fcgyf\'e9lfogad\'e1ssal\
+m\uc0\u369 k\'f6d\u337  v\'e1llalkoz\'e1sokra \'e9p\'fclt. Egy kl\'edmaszerel\u337 n\'e9l, fodr\'e1szn\'e1l, k\'f6nyvel\u337 n\'e9l\
+vagy m\'e1s helyi szolg\'e1ltat\'f3n\'e1l pontosan ez sz\'e1m\'edt:\
+\
+- Megtal\'e1lhat\'f3 a Google T\'e9rk\'e9pen?\
+- Van megfelel\uc0\u337  Google C\'e9gprofilja?\
+- Rendben vannak az \'e9rt\'e9kel\'e9sek, a szolg\'e1ltat\'e1sok, a nyitvatart\'e1s?\
+- Milyen gyorsan reag\'e1l egy be\'e9rkez\uc0\u337  megkeres\'e9sre?\
+\
+Egy online, B2B vagy tan\'e1csad\'f3i profil\'fa v\'e1llalkoz\'e1sn\'e1l viszont ugyanezek a\
+k\'e9rd\'e9sek m\'e1sodlagosak. Ott ink\'e1bb ez a relev\'e1ns:\
+\
+- Hogyan jelenik meg a szakember egy AI-alap\'fa keres\'e9sben?\
+- Milyen szakmai t\'e9m\'e1khoz t\'e1rs\'edtja egy generat\'edv keres\uc0\u337 motor?\
+- El\'e9g er\uc0\u337 s a szakmai entit\'e1sa \'e9s a forr\'e1sai ahhoz, hogy hiteles legyen?\
+- Mennyire relev\'e1ns \'e9s konverzi\'f3k\'e9pes maga a webes jelenl\'e9te?\
+\
+A riport teh\'e1t nem az\'e9rt volt probl\'e9m\'e1s, mert rosszul sz\'e1molt. Az\'e9rt volt\
+probl\'e9m\'e1s, mert ugyanazt a sablont futtatta egy m\'e1sik t\'edpus\'fa\
+v\'e1llalkoz\'e1sra.\
+\
+[SVG 1 \'96 "Hogyan m\uc0\u369 k\'f6d\'f6tt eredetileg a l\'e1that\'f3s\'e1gi jelent\'e9s?"]\
+\
+## A val\'f3di tanuls\'e1g\
+\
+Egy audit-rendszer nem att\'f3l intelligens, hogy min\'e9l t\'f6bb adatot gy\uc0\u369 jt.\
+Att\'f3l, hogy tudja, melyik adat sz\'e1m\'edt az adott v\'e1llalkoz\'e1snak.\
+\
+Ez k\'e9t k\'fcl\'f6n m\'e9r\'e9si logik\'e1t jelent, nem egyet, ami mindenkire r\'e1er\uc0\u337 ltetve\
+"valahogy" m\uc0\u369 k\'f6dik:\
+\
+**Helyi szolg\'e1ltat\'f3** \uc0\u8594  Google C\'e9gprofil, Google Maps, helyi keres\'e9s,\
+\'e9rt\'e9kel\'e9sek, v\'e1laszid\uc0\u337 .\
+\
+**Online / B2B / tan\'e1csad\'f3i / digit\'e1lis v\'e1llalkoz\'e1s** \uc0\u8594  szakmai\
+keres\uc0\u337 l\'e1that\'f3s\'e1g, tartalmi relevancia, szakmai entit\'e1s, AI-alap\'fa keres\'e9si\
+l\'e1that\'f3s\'e1g, GEO.\
+\
+## A "nincs adat" nem ugyanaz, mint a "nincs"\
+\
+A tesztek egy m\'e1sodik, ugyanilyen fontos probl\'e9m\'e1t is megmutattak. Ha a\
+rendszer nem tal\'e1l egy\'e9rtelm\uc0\u369  Google C\'e9gprofilt, nem mondhatja\
+automatikusan azt, hogy "nincs Google C\'e9gprofil". Annak, hogy egy rendszer\
+nem tal\'e1l egyez\'e9st, t\'f6bb oka is lehet.\
+\
+Ez\'e9rt a rendszernek h\'e1rom \'e1llapotot kell megk\'fcl\'f6nb\'f6ztetnie, nem kett\uc0\u337 t:\
+\
+- **FOUND** \'96 megb\'edzhat\'f3an azonos\'edtva.\
+- **NOT FOUND** \'96 bizony\'edtottan nincs.\
+- **UNKNOWN / NEEDS VERIFICATION** \'96 nem tudtuk megb\'edzhat\'f3an azonos\'edtani.\
+\
+Ez apr\'f3 k\'fcl\'f6nbs\'e9gnek t\uc0\u369 nik. Val\'f3j\'e1ban a megb\'edzhat\'f3 automatiz\'e1ci\'f3 egyik\
+alapelve: k\'fcl\'f6nbs\'e9get tenni ak\'f6z\'f6tt, hogy valami nincs, \'e9s ak\'f6z\'f6tt, hogy\
+valamit nem tudunk bizony\'edtani. Bizonytalan \'e1llapotban a rendszer nem\
+adhat hamis negat\'edv k\'f6vetkeztet\'e9st. Ehelyett a megfelel\uc0\u337  k\'f6vetkez\u337 \
+vizsg\'e1latot kell felaj\'e1nlania.\
+\
+## Ebb\uc0\u337 l lett a GEO ir\'e1ny\
+\
+Egy online vagy B2B tan\'e1csad\'f3n\'e1l nem felt\'e9tlen\'fcl az a legfontosabb k\'e9rd\'e9s,\
+hogy megtal\'e1lhat\'f3-e a Google T\'e9rk\'e9pen. Sokkal ink\'e1bb az, hogy mit l\'e1t r\'f3la\
+egy potenci\'e1lis \'fcgyf\'e9l, amikor ChatGPT-ben, Perplexityben vagy Geminiben\
+keres. Ez m\'e1r egy m\'e1sik t\'edpus\'fa l\'e1that\'f3s\'e1g \'96 ez\'e9rt ind\'edtottuk el ezekre a\
+v\'e1llalkoz\'e1sokra k\'fcl\'f6n ir\'e1nyk\'e9nt a GEO / AI-l\'e1that\'f3s\'e1gi tesztet.\
+\
+## A rendszer, amit ebb\uc0\u337 l \'e9p\'edt\'fcnk\
+\
+A leg\'e9rdekesebb r\'e9sz ebben az eg\'e9szben nem maga a hiba volt, hanem az,\
+amit bel\uc0\u337 le tanultunk. Egy automatiz\'e1ci\'f3 akkor v\'e1lik val\'f3ban\
+intelligenss\'e9, amikor nem csup\'e1n v\'e9grehajt egy folyamatot, hanem a\
+kontextus alapj\'e1n d\'f6nti el, melyik folyamatot kell v\'e9grehajtania.\
+\
+Ez\'e9rt nem akarunk minden v\'e1llalkoz\'e1st ugyan\'fagy m\'e9rni. A c\'e9l a k\'f6vetkez\uc0\u337 \
+logika:\
+\
+**Lead \uc0\u8594  Context \u8594  Business / Vertical Classification \u8594  Routing \u8594 \
+Relevant Audit \uc0\u8594  Context-aware Report**\
+\
+[SVG 2 \'96 "Az \'faj, kontextus-alap\'fa folyamat"]\
+\
+A c\'e9l nem az, hogy t\'f6bb adatot gy\uc0\u369 jts\'fcnk. A c\'e9l, hogy a megfelel\u337  adatot\
+\'e9rtelmezz\'fck a megfelel\uc0\u337  kontextusban.\
+\
+[SVG 3 \'96 DATA \uc0\u8800  INSIGHT / Data \u8594  Context \u8594  Decision]\
+\
+## Tribloc\
+\
+Nem weboldalakat \'e9p\'edt\'fcnk. Rendszereket \'e9p\'edt\'fcnk.\
+\
+Nem azt akarjuk, hogy mindenkit ugyan\'fagy m\'e9rj\'fcnk.\
+Azt akarjuk, hogy azt m\'e9rj\'fck, ami az adott v\'e1llalkoz\'e1snak val\'f3ban sz\'e1m\'edt.\
+\
+**[Tribloc AI-l\'e1that\'f3s\'e1gi teszt](https://tribloc.hu/ai-teszt)**}
