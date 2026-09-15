@@ -1,0 +1,187 @@
+<svg viewBox="0 0 1760 1380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2 d2">
+<title id="t2">Tribloc – az új, kontextus-alapú folyamat</title>
+<desc id="d2">Split-screen infografika. Felül az eredeti, egyszerű folyamat: lead, mérés, egyetlen általános report, helyi sablon. Alul az új rendszer: a lead a Context Engine-be fut, amely öt bemeneti jel – iparág, üzleti modell, helyfüggőség, ügyfélút, digitális szándék – alapján besorolja a vállalkozás típusát, majd a megfelelő auditra irányítja: helyi szolgáltató, B2B / tanácsadó vagy AI / digitális vállalkozás. A hiányzó adat nem automatikus negatív következtetést kap, hanem bizonytalan állapotot, amihez a rendszer a GEO / AI-láthatósági tesztet ajánlja.</desc>
+<defs>
+<pattern id="grid2" width="28" height="28" patternUnits="userSpaceOnUse">
+<circle cx="1" cy="1" r="1" fill="#FFFFFF" opacity="0.05"/>
+</pattern>
+<radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#3D2B6E" stop-opacity="0.6"/>
+<stop offset="100%" stop-color="#3D2B6E" stop-opacity="0"/>
+</radialGradient>
+<filter id="soft2" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="28"/>
+</filter>
+<marker id="arrMuted" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="rgba(255,255,255,.32)"/>
+</marker>
+</defs>
+<style>
+:root{
+--bg:#0A0A0A;--surface:#141414;--text:#FFFFFF;--text2:rgba(255,255,255,.56);
+--accent:#7E61B8;--glow:#3D2B6E;--line:rgba(255,255,255,.09);
+}
+text{font-family:'Satoshi','Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:var(--text);}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:3px;fill:var(--text2);text-transform:uppercase;}
+.h1{font-size:33px;font-weight:800;fill:var(--text);}
+.sub{font-size:15px;font-weight:400;fill:var(--text2);}
+.card{fill:var(--surface);stroke:var(--line);stroke-width:1;}
+.card-hd{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;}
+.item{font-size:13.5px;font-weight:400;fill:var(--text2);}
+.tiny{font-size:10.5px;font-weight:500;fill:var(--text2);letter-spacing:.3px;}
+.bullet{fill:var(--accent);}
+.hub-ring{fill:none;stroke:var(--accent);stroke-width:2.4;}
+.hub-lbl{font-size:19px;font-weight:800;text-anchor:middle;}
+.hub-sub{font-size:10.5px;font-weight:500;fill:var(--text2);text-anchor:middle;letter-spacing:.4px;}
+.node-lbl{font-size:13px;font-weight:800;text-anchor:middle;}
+.flow{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-dasharray:4 10;opacity:.55;animation:flowDash 3.6s linear infinite;}
+.flow-slow{animation-duration:5.4s;}
+.flow-fast{animation-duration:2.4s;}
+.flow-static{fill:none;stroke:rgba(255,255,255,.22);stroke-width:1.4;}
+.pulse-el{transform-box:fill-box;transform-origin:center;animation:pulseNode 4.6s ease-in-out infinite;}
+.blink{animation:blinkStatus 3.2s ease-in-out infinite;}
+.badge-pulse{animation:badgePulse 2.6s ease-in-out infinite;}
+.glow-pulse{animation:glowPulse 6.5s ease-in-out infinite;}
+.pill{fill:rgba(126,97,184,.12);stroke:var(--accent);stroke-width:1.4;}
+.pill-fill{fill:var(--accent);}
+.pill-txt{font-size:13px;font-weight:800;fill:var(--accent);text-anchor:middle;}
+.chip{fill:none;stroke:var(--line);stroke-width:1.2;}
+.chip-txt{font-size:12.5px;font-weight:700;fill:var(--text);text-anchor:middle;}
+.chip-muted{fill:none;stroke:rgba(255,255,255,.18);stroke-width:1.2;stroke-dasharray:3 4;}
+.chip-muted-txt{font-size:12px;font-weight:600;fill:var(--text2);text-anchor:middle;}
+.badge-letter{fill:var(--accent);}
+.badge-letter-txt{font-size:12px;font-weight:800;fill:#0A0A0A;text-anchor:middle;}
+@keyframes flowDash{to{stroke-dashoffset:-120;}}
+@keyframes pulseNode{0%,100%{transform:scale(1);}50%{transform:scale(1.035);}}
+@keyframes blinkStatus{0%,100%{opacity:1;}50%{opacity:.28;}}
+@keyframes badgePulse{0%,100%{opacity:.82;}50%{opacity:1;}}
+@keyframes glowPulse{0%,100%{opacity:.55;}50%{opacity:.85;}}
+@media (prefers-reduced-motion: reduce){
+.flow,.pulse-el,.blink,.badge-pulse,.glow-pulse{animation:none !important;}
+}
+</style>
+
+<rect x="0" y="0" width="1760" height="1380" fill="#0A0A0A"/>
+<rect x="0" y="0" width="1760" height="1380" fill="url(#grid2)"/>
+
+<text x="60" y="54" class="eyebrow">TRIBLOC · KONTEXTUS-ALAPÚ FOLYAMAT</text>
+<text x="60" y="98" class="h1">Az új, kontextus-alapú folyamat</text>
+<text x="60" y="128" class="sub">Ugyanazok az adatok, de a rendszer eldönti, melyik vizsgálat számít az adott vállalkozásnak.</text>
+
+<!-- BEFORE row -->
+<text x="60" y="178" class="eyebrow" style="letter-spacing:2.5px;">ELŐTTE · ANTES / BEFORE</text>
+
+<rect x="60" y="200" width="140" height="56" rx="28" class="chip-muted"/>
+<text x="130" y="233" class="chip-muted-txt">LEAD</text>
+
+<line x1="200" y1="228" x2="216" y2="228" class="flow-static" marker-end="url(#arrMuted)"/>
+<rect x="220" y="200" width="140" height="56" rx="28" class="chip-muted"/>
+<text x="290" y="233" class="chip-muted-txt">MÉRÉS</text>
+
+<line x1="360" y1="228" x2="376" y2="228" class="flow-static" marker-end="url(#arrMuted)"/>
+<rect x="380" y="200" width="320" height="56" rx="28" class="chip-muted"/>
+<text x="540" y="233" class="chip-muted-txt">EGYETLEN ÁLTALÁNOS REPORT</text>
+
+<line x1="700" y1="228" x2="716" y2="228" class="flow-static" marker-end="url(#arrMuted)"/>
+<rect x="720" y="200" width="200" height="56" rx="28" class="chip-muted"/>
+<text x="820" y="233" class="chip-muted-txt">HELYI SABLON</text>
+
+<line x1="60" y1="300" x2="1700" y2="300" stroke="var(--line)" stroke-width="1"/>
+<rect x="780" y="284" width="200" height="34" rx="17" class="pill"/>
+<text x="880" y="306" class="pill-txt">MOST / AFTER ↓</text>
+
+<!-- AFTER: input signals -->
+<rect x="340" y="460" width="180" height="165" rx="14" class="card"/>
+<circle cx="362" cy="484" r="2.5" class="bullet"/><text x="374" y="489" class="card-hd" style="font-size:11.5px;">BEMENETI JELEK</text>
+<text x="362" y="514" class="item" style="font-size:12.5px;">Iparág</text>
+<text x="362" y="536" class="item" style="font-size:12.5px;">Üzleti modell</text>
+<text x="362" y="558" class="item" style="font-size:12.5px;">Helyfüggőség</text>
+<text x="362" y="580" class="item" style="font-size:12.5px;">Ügyfélút</text>
+<text x="362" y="602" class="item" style="font-size:12.5px;">Digitális szándék</text>
+<path d="M430,625 V735" class="flow flow-fast"/>
+
+<!-- LEAD -->
+<rect x="60" y="820" width="160" height="60" rx="30" fill="var(--surface)" stroke="var(--accent)" stroke-opacity=".5" stroke-width="1.4"/>
+<text x="140" y="856" class="chip-txt">LEAD</text>
+<path d="M220,850 H315" class="flow flow-fast"/>
+
+<!-- CONTEXT ENGINE hub -->
+<ellipse class="glow-pulse" cx="430" cy="850" rx="200" ry="200" fill="url(#hubGlow)" filter="url(#soft2)"/>
+<circle cx="430" cy="850" r="120" fill="none" stroke="var(--accent)" opacity=".22" stroke-width="10" filter="url(#soft2)" class="pulse-el"/>
+<circle cx="430" cy="850" r="115" fill="var(--surface)" class="hub-ring pulse-el"/>
+<text x="430" y="843" class="hub-lbl">CONTEXT</text>
+<text x="430" y="866" class="hub-lbl">ENGINE</text>
+<text x="430" y="888" class="hub-sub">5 BEMENETI JEL ALAPJÁN DÖNT</text>
+
+<path d="M545,850 H650" class="flow flow-fast"/>
+
+<!-- classification -->
+<rect x="650" y="795" width="220" height="110" rx="16" class="card" stroke="var(--accent)" stroke-opacity=".4"/>
+<text x="760" y="843" class="node-lbl">VERTIKÁL / ÜZLETTÍPUS</text>
+<text x="760" y="865" class="node-lbl">BESOROLÁS</text>
+
+<path d="M870,850 H926" class="flow flow-fast"/>
+
+<!-- routing -->
+<circle cx="960" cy="850" r="34" fill="var(--surface)" stroke="var(--accent)" stroke-width="2" class="pulse-el"/>
+<text x="960" y="855" class="node-lbl" style="font-size:10px;letter-spacing:.5px;">ROUTING</text>
+
+<path d="M994,850 H1040 V520 H1100" class="flow"/>
+<path d="M994,850 H1100" class="flow flow-fast"/>
+<path d="M994,850 H1040 V1180 H1100" class="flow flow-slow"/>
+
+<!-- LANE A -->
+<rect x="1100" y="405" width="320" height="230" rx="16" class="card"/>
+<circle cx="1130" cy="434" r="13" class="badge-letter"/><text x="1130" y="438.5" class="badge-letter-txt">A</text>
+<text x="1152" y="439" class="card-hd">LOCAL SERVICE</text>
+<text x="1130" y="470" class="item">Google Cégprofil</text>
+<text x="1130" y="494" class="item">Google Maps</text>
+<text x="1130" y="518" class="item">Helyi SEO</text>
+<text x="1130" y="542" class="item">Válaszidő</text>
+<text x="1130" y="566" class="item">Helyi láthatósági riport</text>
+<rect x="1130" y="584" width="220" height="26" rx="13" class="chip"/>
+<text x="1240" y="601" class="chip-txt" style="font-size:11px;">HELYI VISIBILITY REPORT</text>
+
+<!-- LANE B -->
+<rect x="1100" y="735" width="320" height="230" rx="16" class="card" stroke="var(--accent)" stroke-opacity=".45"/>
+<circle cx="1130" cy="764" r="13" class="badge-letter"/><text x="1130" y="768.5" class="badge-letter-txt">B</text>
+<text x="1152" y="769" class="card-hd">B2B / CONSULTING</text>
+<text x="1130" y="800" class="item">Webes tekintély</text>
+<text x="1130" y="824" class="item">Szakmai jelenlét</text>
+<text x="1130" y="848" class="item">Konverziós felület</text>
+<text x="1130" y="872" class="item">Tartalmi relevancia</text>
+<text x="1130" y="896" class="item">GEO / AI-láthatóság</text>
+<rect x="1130" y="914" width="220" height="26" rx="13" class="pill"/>
+<text x="1240" y="931" class="pill-txt" style="font-size:11px;">GEO / AI VISIBILITY AUDIT</text>
+
+<!-- LANE C -->
+<rect x="1100" y="1065" width="320" height="230" rx="16" class="card"/>
+<circle cx="1130" cy="1094" r="13" class="badge-letter"/><text x="1130" y="1098.5" class="badge-letter-txt">C</text>
+<text x="1152" y="1099" class="card-hd">AI / DIGITAL BUSINESS</text>
+<text x="1130" y="1130" class="item">AI-láthatóság</text>
+<text x="1130" y="1154" class="item">Generatív keresés</text>
+<text x="1130" y="1178" class="item">Entitás-jelek</text>
+<text x="1130" y="1202" class="item">Forráslefedettség</text>
+<text x="1130" y="1226" class="item">GEO audit</text>
+<rect x="1130" y="1244" width="220" height="26" rx="13" class="chip"/>
+<text x="1240" y="1261" class="chip-txt" style="font-size:11px;">GEO AUDIT</text>
+
+<!-- uncertain data handling -->
+<text x="380" y="1010" class="eyebrow" style="font-size:10.5px;letter-spacing:2px;">BIZONYTALAN ADAT KEZELÉSE</text>
+<path d="M960,884 V1000 H450 V1024" class="flow-static" stroke-dasharray="3 6"/>
+
+<rect x="380" y="1030" width="150" height="50" rx="25" class="chip-muted"/>
+<text x="455" y="1060" class="chip-muted-txt">NO DATA</text>
+
+<line x1="530" y1="1055" x2="562" y2="1055" class="flow-static" marker-end="url(#arrMuted)"/>
+<rect x="566" y="1030" width="290" height="50" rx="25" class="pill"/>
+<text x="711" y="1055" class="pill-txt" style="font-size:12px;">UNKNOWN /</text>
+<text x="711" y="1070" class="pill-txt" style="font-size:12px;">NEEDS VERIFICATION</text>
+
+<path d="M856,1055 H886" class="flow flow-fast"/>
+<rect x="890" y="1024" width="300" height="62" rx="31" class="pill-fill badge-pulse"/>
+<text x="1040" y="1050" text-anchor="middle" style="font-size:13.5px;font-weight:800;fill:#0A0A0A;">Try GEO / AI</text>
+<text x="1040" y="1069" text-anchor="middle" style="font-size:13.5px;font-weight:800;fill:#0A0A0A;">Visibility Test</text>
+
+<path d="M1190,1024 C 1250,980 1280,940 1310,905" class="flow-static" stroke-dasharray="2 6" opacity=".5"/>
+</svg>

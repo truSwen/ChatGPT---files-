@@ -1,0 +1,42 @@
+<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t3 d3">
+<title id="t3">Tribloc – Data ≠ Insight</title>
+<desc id="d3">Záró vizuál: az adat önmagában nem döntés. A kontextus alakítja adatból döntéssé.</desc>
+<defs>
+<pattern id="grid3" width="26" height="26" patternUnits="userSpaceOnUse">
+<circle cx="1" cy="1" r="1" fill="#FFFFFF" opacity="0.045"/>
+</pattern>
+<radialGradient id="miniGlow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#3D2B6E" stop-opacity="0.5"/>
+<stop offset="100%" stop-color="#3D2B6E" stop-opacity="0"/>
+</radialGradient>
+<filter id="soft3" x="-60%" y="-60%" width="220%" height="220%">
+<feGaussianBlur stdDeviation="22"/>
+</filter>
+</defs>
+<style>
+text{font-family:'Satoshi','Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;}
+.flow{fill:none;stroke:#7E61B8;stroke-width:1.6;stroke-dasharray:4 9;opacity:.6;animation:flowDash 3.4s linear infinite;}
+.pulse-el{transform-box:fill-box;transform-origin:center;animation:pulseNode 4.6s ease-in-out infinite;}
+@keyframes flowDash{to{stroke-dashoffset:-104;}}
+@keyframes pulseNode{0%,100%{opacity:.5;}50%{opacity:.85;}}
+@media (prefers-reduced-motion: reduce){
+.flow,.pulse-el{animation:none !important;}
+}
+</style>
+
+<rect x="0" y="0" width="900" height="260" fill="#0A0A0A"/>
+<rect x="0" y="0" width="900" height="260" fill="url(#grid3)"/>
+<ellipse cx="450" cy="120" rx="260" ry="120" fill="url(#miniGlow)" filter="url(#soft3)" class="pulse-el"/>
+
+<text x="450" y="128" text-anchor="middle" style="font-size:46px;font-weight:800;">
+<tspan fill="#FFFFFF">DATA </tspan><tspan fill="#7E61B8"> ≠ </tspan><tspan fill="#FFFFFF">INSIGHT</tspan>
+</text>
+
+<g style="font-size:18px;font-weight:600;">
+<text x="450" y="200" text-anchor="middle">
+<tspan fill="rgba(255,255,255,.56)">Data</tspan><tspan fill="rgba(255,255,255,.4)">   →   </tspan><tspan fill="#7E61B8">Context</tspan><tspan fill="rgba(255,255,255,.4)">   →   </tspan><tspan fill="#FFFFFF">Decision</tspan>
+</text>
+</g>
+
+<line x1="330" y1="218" x2="570" y2="218" class="flow"/>
+</svg>
